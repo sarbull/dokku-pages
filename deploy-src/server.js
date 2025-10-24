@@ -1,5 +1,7 @@
-var express = require('express'); 
-var app = express();
+const express = require('express'); 
+const path = require('path');
+const app = express();
+
 app.use(express.static(__dirname + '/public'));
 
 app.use('/', (req, res, next) => {
@@ -10,6 +12,8 @@ app.use('/', (req, res, next) => {
   }
 });
 
-const port = process.env.PORT || 3000
-console.log("Listening on port: " + port)
+const port = process.env.PORT || 3000;
+
+console.log("Listening on port: " + port);
+
 app.listen(port);
