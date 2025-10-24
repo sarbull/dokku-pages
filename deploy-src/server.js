@@ -6,7 +6,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/', (req, res, next) => {
   try {
-    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+    res.sendFile(path.join(__dirname, '/public', 'index.html'));
   } catch (err) {
     next(err);
   }
